@@ -17,7 +17,7 @@ export interface SessionPayload {
 
 // Create a JWT token
 async function createToken(payload: SessionPayload): Promise<string> {
-  return new SignJWT(payload)
+  return new SignJWT({ ...payload } as Record<string, unknown>)
     .setProtectedHeader({ alg: 'HS256' })
     .setExpirationTime('7d')
     .setIssuedAt()
