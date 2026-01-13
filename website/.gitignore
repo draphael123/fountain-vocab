@@ -9,8 +9,8 @@ out
 build
 dist
 
-# Database
-data/
+# Database (SQLite files in root data folder)
+/data/
 
 # Environment
 .env
@@ -36,5 +36,4 @@ coverage
 
 # Misc
 *.tsbuildinfo
-next-env.d.ts
 
