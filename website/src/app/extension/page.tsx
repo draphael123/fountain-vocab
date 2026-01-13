@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { Chrome, Firefox, Highlighter, Bell, PenLine, Download, ArrowRight } from 'lucide-react';
+import { Chrome, Globe, Highlighter, Bell, PenLine, Download, ArrowRight } from 'lucide-react';
 
 export default function ExtensionPage() {
   return (
@@ -31,7 +31,7 @@ export default function ExtensionPage() {
                 href="#firefox"
                 className="btn-secondary text-lg px-8 py-4 flex items-center gap-2"
               >
-                <Firefox className="w-5 h-5" />
+                <Globe className="w-5 h-5" />
                 Download for Firefox
               </a>
             </div>
@@ -178,7 +178,7 @@ export default function ExtensionPage() {
               <div id="firefox" className="card-elevated p-8">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center">
-                    <Firefox className="w-6 h-6 text-orange-600" />
+                    <Globe className="w-6 h-6 text-orange-600" />
                   </div>
                   <h3 className="font-serif text-xl font-bold text-ink-900">Mozilla Firefox</h3>
                 </div>
