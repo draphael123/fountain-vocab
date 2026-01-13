@@ -1,0 +1,15 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="128" height="128" rx="24" fill="#18181B"/>
+  
+  <!-- Book shape -->
+  <path d="M32 96C32 93.7909 33.7909 92 36 92H96V28H36C33.7909 28 32 29.7909 32 32V96Z" fill="#18181B" stroke="#e8ba3b" stroke-width="4"/>
+  <path d="M36 92H96V100H36C33.7909 100 32 98.2091 32 96C32 93.7909 33.7909 92 36 92Z" fill="#e8ba3b"/>
+  
+  <!-- Page lines -->
+  <line x1="44" y1="44" x2="84" y2="44" stroke="#e8ba3b" stroke-width="3" stroke-linecap="round"/>
+  <line x1="44" y1="56" x2="76" y2="56" stroke="#e8ba3b" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <line x1="44" y1="68" x2="80" y2="68" stroke="#e8ba3b" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+  <line x1="44" y1="80" x2="68" y2="80" stroke="#e8ba3b" stroke-width="3" stroke-linecap="round" opacity="0.3"/>
+</svg>
+

@@ -1,0 +1,183 @@
+/* Lexicon Daily - Content Script Styles */
+
+/* Word highlight */
+.lexicon-highlight {
+  background: linear-gradient(180deg, transparent 60%, rgba(232, 186, 59, 0.3) 60%);
+  border-bottom: 2px solid rgba(232, 186, 59, 0.6);
+  cursor: help;
+  transition: all 0.15s ease;
+}
+
+.lexicon-highlight:hover {
+  background: linear-gradient(180deg, transparent 50%, rgba(232, 186, 59, 0.4) 50%);
+  border-bottom-color: rgba(232, 186, 59, 0.8);
+}
+
+/* Tooltip */
+.lexicon-tooltip {
+  position: absolute;
+  z-index: 2147483647;
+  max-width: 320px;
+  padding: 16px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #393941;
+  animation: lexicon-fade-in 0.15s ease;
+}
+
+@keyframes lexicon-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lexicon-tooltip-header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.lexicon-tooltip-word {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #18181b;
+}
+
+.lexicon-tooltip-pos {
+  font-size: 12px;
+  color: #737384;
+  font-style: italic;
+}
+
+.lexicon-tooltip-definition {
+  margin: 0;
+  color: #4c4c58;
+}
+
+.lexicon-tooltip-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #eeeef0;
+}
+
+.lexicon-tooltip-tone {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background: #f6f7f6;
+  color: #607263;
+}
+
+.lexicon-tooltip-brand {
+  font-size: 11px;
+  color: #91919f;
+}
+
+/* Suggestion popup */
+.lexicon-suggestion {
+  position: absolute;
+  z-index: 2147483647;
+  width: 400px;
+  max-width: calc(100vw - 32px);
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #393941;
+  animation: lexicon-slide-in 0.2s ease;
+}
+
+@keyframes lexicon-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lexicon-suggestion-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #18181b;
+  color: white;
+  border-radius: 12px 12px 0 0;
+  font-weight: 600;
+}
+
+.lexicon-suggestion-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.lexicon-suggestion-close {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+
+.lexicon-suggestion-close:hover {
+  opacity: 1;
+}
+
+.lexicon-suggestion-content {
+  padding: 16px;
+}
+
+.lexicon-suggestion-original {
+  margin: 0 0 12px 0;
+  padding: 12px;
+  background: #f7f7f8;
+  border-radius: 8px;
+  font-style: italic;
+  color: #5d5d6c;
+}
+
+.lexicon-suggestion-text {
+  margin: 0;
+  color: #4c4c58;
+}
+
+.lexicon-suggestion-footer {
+  padding: 12px 16px;
+  background: #fdf9e7;
+  border-radius: 0 0 12px 12px;
+  font-size: 13px;
+  color: #b17723;
+}
+
+.lexicon-suggestion-footer strong {
+  color: #b17723;
+}
+

@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-ink-50 text-ink-900 font-sans;
+  }
+
+  ::selection {
+    @apply bg-gold-200 text-ink-900;
+  }
+}
+
+@layer components {
+  .container-narrow {
+    @apply max-w-3xl mx-auto px-6;
+  }
+
+  .container-wide {
+    @apply max-w-6xl mx-auto px-6;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-ink-900 via-ink-700 to-ink-900 bg-clip-text text-transparent;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium
+           bg-ink-900 text-ink-50 hover:bg-ink-800 
+           transition-all duration-200 ease-out
+           focus:outline-none focus:ring-2 focus:ring-ink-500 focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium
+           bg-ink-100 text-ink-900 hover:bg-ink-200
+           transition-all duration-200 ease-out
+           focus:outline-none focus:ring-2 focus:ring-ink-500 focus:ring-offset-2;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium
+           text-ink-700 hover:bg-ink-100 hover:text-ink-900
+           transition-all duration-200 ease-out
+           focus:outline-none focus:ring-2 focus:ring-ink-500 focus:ring-offset-2;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl border border-ink-100 shadow-sm;
+  }
+
+  .card-elevated {
+    @apply bg-white rounded-2xl border border-ink-100 shadow-lg shadow-ink-950/5;
+  }
+
+  .input {
+    @apply w-full px-4 py-3 rounded-lg border border-ink-200 bg-white
+           text-ink-900 placeholder:text-ink-400
+           transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-ink-700 mb-2;
+  }
+
+  .link {
+    @apply text-ink-700 hover:text-ink-900 underline underline-offset-4 
+           decoration-ink-300 hover:decoration-ink-500 transition-colors;
+  }
+
+  .prose-custom {
+    @apply text-ink-700 leading-relaxed;
+  }
+
+  .prose-custom h1,
+  .prose-custom h2,
+  .prose-custom h3 {
+    @apply font-serif text-ink-900;
+  }
+
+  .prose-custom p {
+    @apply mb-4;
+  }
+
+  .word-display {
+    @apply font-serif text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight;
+  }
+
+  .phonetic {
+    @apply font-mono text-lg text-ink-500;
+  }
+
+  .tone-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wider;
+  }
+
+  .tone-professional {
+    @apply bg-sage-100 text-sage-700;
+  }
+
+  .tone-poetic {
+    @apply bg-gold-100 text-gold-700;
+  }
+
+  .tone-assertive {
+    @apply bg-ink-100 text-ink-700;
+  }
+
+  .tone-sophisticated {
+    @apply bg-ink-800 text-ink-100;
+  }
+
+  .tone-contemplative {
+    @apply bg-sage-50 text-sage-600;
+  }
+
+  .streak-flame {
+    @apply text-gold-500;
+  }
+}
+
+@layer utilities {
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+

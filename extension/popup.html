@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lexicon Daily</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="app" class="popup-container">
+    <!-- Loading state -->
+    <div id="loading" class="loading-state">
+      <div class="spinner"></div>
+      <p>Loading today's word...</p>
+    </div>
+
+    <!-- Main content -->
+    <div id="content" class="hidden">
+      <!-- Header -->
+      <header class="popup-header">
+        <div class="brand">
+          <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          </svg>
+          <span class="brand-name">Lexicon Daily</span>
+        </div>
+        <div id="streak-badge" class="streak-badge hidden">
+          <svg class="streak-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2c1.5 2.1 3 4.5 3 6.5 0 2.5-1.5 4.5-3 4.5s-3-2-3-4.5c0-2 1.5-4.4 3-6.5z"/>
+            <path d="M12 22c-4.97 0-9-4.03-9-9 0-3.53 2.13-6.74 5-8.5 0 0-.5 2.5-.5 4 0 3.5 2 6.5 4.5 6.5s4.5-3 4.5-6.5c0-1.5-.5-4-.5-4 2.87 1.76 5 4.97 5 8.5 0 4.97-4.03 9-9 9z"/>
+          </svg>
+          <span id="streak-count">0</span>
+        </div>
+      </header>
+
+      <!-- Day indicator -->
+      <div class="day-indicator">
+        <span>Day <span id="day-number">1</span></span>
+        <span id="used-badge" class="used-badge hidden">✓ Used</span>
+      </div>
+
+      <!-- Word display -->
+      <main class="word-section">
+        <h1 id="word" class="word-title">Loading...</h1>
+        <div class="word-meta">
+          <span id="phonetic" class="phonetic"></span>
+          <span class="separator">•</span>
+          <span id="part-of-speech" class="part-of-speech"></span>
+        </div>
+        <span id="tone-badge" class="tone-badge"></span>
+        <p id="definition" class="definition"></p>
+        
+        <!-- Example sentence -->
+        <div class="example-section">
+          <h3 class="example-label">Example</h3>
+          <p id="example" class="example-text"></p>
+        </div>
+      </main>
+
+      <!-- Actions -->
+      <div class="actions">
+        <button id="mark-used-btn" class="btn btn-primary">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 6L9 17l-5-5"></path>
+          </svg>
+          Mark as Used
+        </button>
+        <a id="dashboard-link" href="#" class="btn btn-secondary" target="_blank">
+          Open Dashboard
+        </a>
+      </div>
+
+      <!-- Footer -->
+      <footer class="popup-footer">
+        <a href="#" id="settings-link">Settings</a>
+        <span class="separator">•</span>
+        <a href="https://lexicondaily.com" target="_blank">Website</a>
+      </footer>
+    </div>
+
+    <!-- Not logged in state -->
+    <div id="not-logged-in" class="hidden login-prompt">
+      <div class="brand large">
+        <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+        </svg>
+        <span class="brand-name">Lexicon Daily</span>
+      </div>
+      <p class="login-text">Sign in to sync your progress and build your streak.</p>
+      <a href="https://lexicondaily.com/login" class="btn btn-primary" target="_blank">
+        Sign In
+      </a>
+      <a href="https://lexicondaily.com/signup" class="btn btn-secondary" target="_blank">
+        Create Account
+      </a>
+      <p class="preview-text">Or preview today's word below</p>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
+

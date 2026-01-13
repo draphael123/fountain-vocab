@@ -1,0 +1,13 @@
+# Build artifacts
+*.zip
+dist/
+
+# IDE
+.idea
+.vscode
+*.swp
+.DS_Store
+
+# Generated icons (keep placeholder)
+icons/*.png
+

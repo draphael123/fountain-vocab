@@ -1,0 +1,9 @@
+This folder should contain the extension icons:
+- icon16.png (16x16)
+- icon32.png (32x32)
+- icon48.png (48x48)
+- icon128.png (128x128)
+
+You can generate these using any icon generator or design tool.
+The icon should represent a book or vocabulary theme using gold (#e8ba3b) and dark ink (#18181b) colors.
+
